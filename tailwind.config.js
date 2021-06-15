@@ -18,12 +18,33 @@ module.exports = {
       fontSize: {
         base: '16px',
         md: '18px',
+        lg: '28px',
       },
       colors: {
         transparent: 'transparent',
         black: '#000',
         white: '#fff',
-        ...colors,
+        cyan: {
+          100: '#29C7C7',
+        },
+        purple: {
+          ...colors.purple,
+          100: '#3B3054',
+        },
+        indigo: {
+          ...colors.indigo,
+          100: '#35323E',
+          200: '#232127',
+        },
+        gray: {
+          ...colors.gray,
+          100: '#BFBFBF',
+          200: '#9E9AA7',
+        },
+        red: {
+          ...colors.red,
+          100: '#F46262',
+        },
       },
       screens: {
         desktop: '1024px',

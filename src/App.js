@@ -1,7 +1,15 @@
+import AppHeader from './components/AppHeader';
+
 function App() {
   return (
-    <div>
-      <h1>Shortly</h1>
+    <div
+      id="app"
+      className="flex flex-col min-h-screen"
+    >
+      <AppHeader />
+      <main>
+        <h1>Main Content</h1>
+      </main>
     </div>
   );
 }
