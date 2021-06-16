@@ -1,4 +1,6 @@
 import AppHeader from './components/AppHeader';
+import Home from './views/Home';
+import AppFooter from './components/AppFooter';
 
 function App() {
   return (
@@ -8,8 +10,9 @@ function App() {
     >
       <AppHeader />
       <main className="flex-grow px-3">
-        <h1>Main Content</h1>
+        <Home />
       </main>
+      <AppFooter />
     </div>
   );
 }

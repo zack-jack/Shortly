@@ -6,3 +6,7 @@
   @apply text-cyan-200 no-underline;
   transition: all .2s ease;
 }
+
+.link--secondary {
+  @apply text-gray-200 font-normal tracking-normal;
+}

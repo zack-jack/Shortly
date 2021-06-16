@@ -1,0 +1,8 @@
+.social-icon path {
+  @apply fill-current text-gray-200;
+}
+
+.social-icon:hover path {
+  @apply fill-current text-cyan-200;
+  transition: all .2s ease;
+}
