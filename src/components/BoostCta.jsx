@@ -2,7 +2,10 @@ import { PropTypes } from 'prop-types';
 
 const BoostCta = ({ headingText, buttonText }) => (
   <div className="boost-cta">
-    <div className="boost-cta__bg-img not-sr-only" />
+    <div
+      aria-hidden
+      className="boost-cta__bg-img"
+    />
     <div className="boost-cta__content">
       <span className="boost-cta__heading">{headingText}</span>
       <a

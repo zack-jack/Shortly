@@ -114,7 +114,10 @@ const AppFooter = () => (
     <div className="flex items-center mt-10">
       <a href="/">
         <span className="sr-only">Facebook</span>
-        <FacebookSVG className="social-icon not-sr-only" />
+        <FacebookSVG
+          aria-hidden
+          className="social-icon not-sr-only"
+        />
       </a>
       <a href="/" className="ml-4">
         <span className="sr-only">Twitter</span>
@@ -122,11 +125,17 @@ const AppFooter = () => (
       </a>
       <a href="/" className="ml-4">
         <span className="sr-only">Pinterest</span>
-        <PinterestSVG className="social-icon not-sr-only" />
+        <PinterestSVG
+          aria-hidden
+          className="social-icon not-sr-only"
+        />
       </a>
       <a href="/" className="ml-4">
         <span className="sr-only">Instagram</span>
-        <InstagramSVG className="social-icon not-sr-only" />
+        <InstagramSVG
+          aria-hidden
+          className="social-icon not-sr-only"
+        />
       </a>
     </div>
   </footer>

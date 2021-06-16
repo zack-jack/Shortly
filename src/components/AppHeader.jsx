@@ -5,7 +5,7 @@ const AppHeader = () => {
   const [isOpen, toggleIsOpen] = useToggle(false);
 
   return (
-    <header className="relative flex items-center justify-between py-6 px-4">
+    <header className="fixed top-0 right-0 left-0 flex items-center justify-between bg-white py-6 px-4 z-10">
       <a
         href="/"
         className="text-lg font-bold text-indigo-100 leading-none"

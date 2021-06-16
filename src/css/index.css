@@ -2,5 +2,6 @@
 @tailwind components;
 @import "./components/index.css";
 @import "./animations/index.css";
-@import './views/index.css';
+@import "./views/index.css";
 @tailwind utilities;
+@import "./utilities/index.css";

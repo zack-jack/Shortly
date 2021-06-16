@@ -1,10 +1,10 @@
 .boost-cta {
   @apply relative bg-purple-100;
+  height: 300px;
 }
 
 .boost-cta__bg-img {
-  @apply bg-center bg-cover bg-no-repeat;
-  height: 300px;
+  @apply bg-center bg-cover bg-no-repeat h-full;
   background: url('../../assets/images/bg-boost-mobile.svg');
 }
 

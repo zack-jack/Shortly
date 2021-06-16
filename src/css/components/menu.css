@@ -5,12 +5,10 @@
 }
 
 .menu__backdrop {
-  @apply fixed right-0 bottom-0 left-0 bg-white bg-opacity-80;
+  @apply fixed right-0 bottom-0 left-0 bg-white bg-opacity-80 z-10;
   top: 64px;
-  z-index: 1;
 }
 
 .menu__content {
-  @apply relative bg-purple-100 my-4 mx-3 py-8 px-6 rounded-xl text-center;
-  z-index: 2;
+  @apply fixed right-0 left-0 bg-purple-100 my-4 mx-3 py-8 px-6 rounded-xl text-center z-20;
 }
