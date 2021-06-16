@@ -1,15 +1,23 @@
-import Hamburger from './Hamburger';
+import Menu from './Menu';
+import useToggle from '../hooks/useToggle';
 
-const AppHeader = () => (
-  <header className="flex items-center justify-between py-4 px-2">
-    <a
-      href="/"
-      className="text-lg font-bold text-indigo-100 leading-none"
-    >
-      Shortly
-    </a>
-    <Hamburger />
-  </header>
-);
+const AppHeader = () => {
+  const [isOpen, toggleIsOpen] = useToggle(false);
+
+  return (
+    <header className="relative flex items-center justify-between py-4 px-3">
+      <a
+        href="/"
+        className="text-lg font-bold text-indigo-100 leading-none"
+      >
+        Shortly
+      </a>
+      <Menu
+        isOpen={isOpen}
+        handleClick={() => toggleIsOpen()}
+      />
+    </header>
+  );
+};
 
 export default AppHeader;

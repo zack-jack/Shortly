@@ -1,3 +1,4 @@
+// eslint-disable-next-line import/no-extraneous-dependencies
 const { colors, fontFamily } = require('tailwindcss/defaultTheme');
 
 // spacing by 4 up to a multiple of 10
@@ -25,7 +26,8 @@ module.exports = {
         black: '#000',
         white: '#fff',
         cyan: {
-          100: '#29C7C7',
+          100: '#9BE3E2',
+          200: '#29C7C7',
         },
         purple: {
           ...colors.purple,

@@ -1,0 +1,10 @@
+.button {
+  @apply inline-flex content-center justify-center items-center pl-4 pr-4 bg-cyan-200 text-white font-bold rounded-full;
+  height: 44px;
+  min-width: 170px;
+}
+
+.button:hover {
+  @apply bg-cyan-100 text-indigo-100;
+  transition: all .2s ease;
+}

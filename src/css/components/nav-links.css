@@ -1,0 +1,8 @@
+.nav-links {
+  @apply flex flex-col items-center;
+}
+
+.nav-links__hairline {
+  @apply w-full block bg-gray-100 bg-opacity-20;
+  height: 1px;
+}

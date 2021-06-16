@@ -1,0 +1,8 @@
+.link {
+  @apply text-white font-medium tracking-wide;
+}
+
+.link:hover {
+  @apply text-cyan-200 no-underline;
+  transition: all .2s ease;
+}
