@@ -1,0 +1,20 @@
+.boost-cta {
+  @apply relative bg-purple-100;
+}
+
+.boost-cta__bg-img {
+  @apply bg-center bg-cover bg-no-repeat;
+  height: 300px;
+  background: url('../../assets/images/bg-boost-mobile.svg');
+}
+
+.boost-cta__content {
+  @apply absolute flex flex-col items-center text-center w-full;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.boost-cta__heading {
+  @apply text-lg font-bold text-white;
+}
