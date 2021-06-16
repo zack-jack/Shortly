@@ -27,7 +27,9 @@ const Menu = ({ isOpen, handleClick }) => (
       >
         <div
           aria-hidden
+          data-testid="backdrop"
           className="menu__backdrop"
+          onClick={handleClick}
         />
         <div className="menu__content">
           <NavLinks />
