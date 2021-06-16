@@ -5,7 +5,7 @@
 
 .boost-cta__bg-img {
   @apply bg-center bg-cover bg-no-repeat h-full;
-  background: url('../../assets/images/bg-boost-mobile.svg');
+  background: url('../../assets/images/_bg-boost-mobile.svg');
 }
 
 .boost-cta__content {

@@ -1,0 +1,16 @@
+.shorten-widget {
+  @apply relative w-full bg-purple-100 rounded-lg overflow-hidden;
+  height: 150px;
+}
+
+.shorten-widget__bg-img {
+  @apply absolute right-0;
+  top: -30px;
+}
+
+.shorten-widget__form {
+  @apply absolute flex flex-col items-center w-full p-6;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

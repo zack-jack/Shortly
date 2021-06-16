@@ -5,7 +5,9 @@ const { colors, fontFamily } = require('tailwindcss/defaultTheme');
 // 0 index is 0, 11 index is 40
 const spacing = new Array(11)
   .fill()
-  .reduce((result, _, index) => Object.assign(result, { [index]: `${index * 4}px` }), {});
+  .reduce((result, _, index) => Object.assign(result, { [index]: `${index * 4}px` }), {
+    xl: '100px',
+  });
 
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],

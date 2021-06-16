@@ -1,6 +1,7 @@
 /* eslint-disable max-len */
 import { ReactComponent as IllustrationSVG } from '../assets/images/_illustration-working.svg';
 import BoostCta from '../components/BoostCta';
+import ShortenWidget from '../components/ShortenWidget';
 
 const Home = () => (
   <>
@@ -26,7 +27,12 @@ const Home = () => (
         Get Started
       </a>
     </section>
-    <BoostCta />
+    <section className="flex justify-center my-xl px-4">
+      <ShortenWidget />
+    </section>
+    <section>
+      <BoostCta />
+    </section>
   </>
 );
 

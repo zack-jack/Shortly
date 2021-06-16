@@ -1,0 +1,4 @@
+.input-field {
+  @apply w-full px-4 py-6 rounded-md;
+  height: 44px;
+}

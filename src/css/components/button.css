@@ -8,3 +8,7 @@
   @apply bg-cyan-100 text-indigo-100;
   transition: all .2s ease;
 }
+
+.button--rect {
+  @apply rounded-md;
+}
