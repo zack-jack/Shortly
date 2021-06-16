@@ -20,6 +20,7 @@ module.exports = {
         base: '16px',
         md: '18px',
         lg: '28px',
+        xl: '36px',
       },
       colors: {
         transparent: 'transparent',

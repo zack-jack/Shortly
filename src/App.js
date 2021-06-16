@@ -9,7 +9,7 @@ function App() {
       className="flex flex-col min-h-screen"
     >
       <AppHeader />
-      <main className="flex-grow px-3">
+      <main className="flex-grow px-4">
         <Home />
       </main>
       <AppFooter />

@@ -1,0 +1,9 @@
+.home__illus-wrapper {
+  @apply relative -mr-4 overflow-hidden;
+  height: 300px;
+}
+
+.home__illus {
+  @apply absolute top-0 bottom-0;
+  right: -135px;
+}
