@@ -3,14 +3,13 @@
   test,
   expect,
 */
-
-import React from 'react';
 import {
   fireEvent, render, screen,
 } from '@testing-library/react';
 import { config } from 'react-transition-group';
 import AppHeader from '../AppHeader';
 
+// disable transitions timers
 config.disabled = true;
 
 const page = {

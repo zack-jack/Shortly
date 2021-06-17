@@ -2,3 +2,11 @@
   @apply w-full px-4 py-6 rounded-md;
   height: 44px;
 }
+
+.input-field.errors {
+  @apply border-2 border-solid border-red-100;
+}
+
+.input-field__error-msg {
+  @apply h-4 my-3 pl-1 text-red-100 text-sm leading-none;
+}
