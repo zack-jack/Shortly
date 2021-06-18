@@ -10,7 +10,7 @@ const BoostCta = ({ headingText, buttonText, handleScroll }) => (
       <span className="boost-cta__heading">{headingText}</span>
       <button
         type="button"
-        className="button mt-3"
+        className="btn mt-3"
         onClick={handleScroll}
       >
         {buttonText}

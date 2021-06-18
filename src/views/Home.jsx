@@ -55,7 +55,7 @@ const Home = () => {
         </p>
         <button
           type="button"
-          className="button mt-5"
+          className="btn mt-5"
           onClick={scrollToWidget}
         >
           Get Started

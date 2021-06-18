@@ -1,20 +1,53 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import ShortenWidgetResult from './ShortenWidgetResult';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { ReactComponent as BackgroundSVG } from '../assets/images/_bg-shorten-mobile.svg';
 import { linkValidator } from '../validation/link';
+import { post } from '../utils/http';
+import ShortenWidgetResult from './ShortenWidgetResult';
 
 const ShortenWidget = () => {
   const {
     formState: { errors }, register, reset, handleSubmit,
   } = useForm();
-  const [links] = useState([{ original: 'example', shortened: 'https://example.com/' }]);
+  const [links, setLinks] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [apiError, setApiError] = useState('');
 
-  const submit = (data) => {
-    // eslint-disable-next-line no-console
-    console.log('form data:', data);
+  const submit = async ({ link }) => {
+    setLoading(true);
+    setApiError('');
+
+    // Bitly API expects JSON headers and params
+    // TODO: build proxy service to make this less annoying
+    const {
+      id,
+      link: shortenedUrl,
+      long_url: originalUrl,
+      raw,
+    } = await post('https://api-ssl.bitly.com/v4/shorten',
+      JSON.stringify({ long_url: link }),
+      {
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${process.env.REACT_APP_API_ACCESS_TOKEN}`,
+        },
+      });
+
+    if (!raw?.data?.status?.toString().startsWith('2') && raw?.data?.description) {
+      setApiError(raw?.data?.description);
+      setLoading(false);
+      return;
+    }
+
+    setLinks([
+      { id, shortenedUrl, originalUrl },
+      ...links,
+    ]);
+
     reset();
+    setLoading(false);
   };
 
   return (
@@ -38,33 +71,53 @@ const ShortenWidget = () => {
               name="link"
               placeholder="Shorten a link here..."
               type="text"
-              className={errors.link ? 'input-field errors' : 'input-field'}
+              className={(errors.link || apiError) ? 'input-field errors' : 'input-field'}
             />
           </label>
           <div className="input-field__error-msg">
-            {errors.link && errors.link.message}
+            { errors?.link?.message || apiError }
           </div>
-          <button
-            type="submit"
-            className="button button--rect w-full"
-          >
-            Shorten It!
-          </button>
+          {
+            loading ? (
+              <button
+                aria-disabled
+                type="submit"
+                disabled
+                className="btn btn--rect btn--disabled w-full"
+              >
+                Shortening...
+              </button>
+            ) : (
+              <button
+                type="submit"
+                className="btn btn--rect w-full"
+              >
+                Shorten It!
+              </button>
+            )
+          }
         </form>
       </div>
-      {
-        links.length
-        && links
-          .filter(({ shortened }) => shortened)
-          .map(({ original, shortened }) => (
-            <ShortenWidgetResult
-              key={shortened}
-              original={original}
-              shortened={shortened}
-              className="mt-5"
-            />
-          ))
-      }
+      <TransitionGroup>
+        {
+          links.length > 0
+          && links
+            .filter(({ shortenedUrl }) => shortenedUrl)
+            .map(({ id, originalUrl, shortenedUrl }) => (
+              <CSSTransition
+                key={id}
+                timeout={300}
+                classNames="slide-in-down"
+              >
+                <ShortenWidgetResult
+                  original={originalUrl}
+                  shortened={shortenedUrl}
+                  className="mt-5"
+                />
+              </CSSTransition>
+            ))
+          }
+      </TransitionGroup>
     </div>
   );
 };

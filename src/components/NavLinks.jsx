@@ -45,7 +45,7 @@ const NavLinks = () => (
       <li>
         <a
           href="/"
-          className="button mt-5"
+          className="btn mt-5"
         >
           Signup
         </a>

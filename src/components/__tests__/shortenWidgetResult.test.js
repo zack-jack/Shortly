@@ -11,8 +11,8 @@ import ShortenWidgetResult from '../ShortenWidgetResult';
 
 const page = {
   button: {
-    copy: 'Copy',
-    copied: 'Copied!',
+    copy: /Copy/i,
+    copied: /Copied!/i,
   },
 };
 
