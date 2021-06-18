@@ -4,8 +4,8 @@ import BoostCta from '../components/BoostCta';
 import ShortenWidget from '../components/ShortenWidget';
 
 const Home = () => (
-  <>
-    <section className="home text-center px-4">
+  <div className="home">
+    <section className="text-center px-4">
       <div
         className="home__illus-wrapper"
       >
@@ -33,7 +33,7 @@ const Home = () => (
     <section>
       <BoostCta />
     </section>
-  </>
+  </div>
 );
 
 export default Home;

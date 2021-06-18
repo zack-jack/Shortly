@@ -1,8 +1,8 @@
-.shorten-widget {
+.shorten-widget__form-wrapper {
   @apply relative w-full bg-purple-100 rounded-lg overflow-hidden;
 }
 
-.shorten-widget__bg-img {
+.shorten-widget__form-bg-img {
   @apply absolute right-0;
   top: -30px;
 }

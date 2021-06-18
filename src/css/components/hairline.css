@@ -1,0 +1,9 @@
+.hairline-light {
+  @apply w-full block bg-gray-100 bg-opacity-20;
+  height: 1px;
+}
+
+.hairline-dark {
+  @apply w-full block bg-indigo-200 bg-opacity-20;
+  height: 1px;
+}

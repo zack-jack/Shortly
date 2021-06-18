@@ -1,12 +1,17 @@
 .link {
-  @apply text-white font-medium tracking-wide;
+  @apply text-cyan-200 font-medium tracking-wide;
 }
 
-.link:hover {
+.link--white {
+  @apply text-white;
+}
+
+.link--gray {
+  @apply text-gray-200 font-normal tracking-normal;
+}
+
+.link--white:hover,
+.link--gray:hover {
   @apply text-cyan-200 no-underline;
   transition: all .2s ease;
-}
-
-.link--secondary {
-  @apply text-gray-200 font-normal tracking-normal;
 }

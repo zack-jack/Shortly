@@ -5,8 +5,20 @@
 }
 
 .button:hover {
-  @apply bg-cyan-100 text-indigo-100;
-  transition: all .2s ease;
+  @screen desktop {
+    @apply bg-cyan-100 text-indigo-100;
+    transition: all .2s ease;
+  }
+}
+
+.button--secondary {
+  @apply bg-purple-100;
+}
+
+.button--secondary:hover {
+  @screen desktop {
+    @apply bg-purple-100 text-white cursor-not-allowed;
+  }
 }
 
 .button--rect {
