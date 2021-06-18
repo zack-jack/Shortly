@@ -1,22 +1,8 @@
-import { useEffect, useState } from 'react';
 import { PropTypes } from 'prop-types';
+import useCopyToClipboard from '../hooks/useCopyToClipboard';
 
 const ShortenWidgetResult = ({ className, original, shortened }) => {
-  const [copied, setCopied] = useState(false);
-
-  const copyToClipboard = () => {
-    navigator.clipboard.writeText(shortened);
-    setCopied(true);
-  };
-
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setCopied(false);
-    }, 3000);
-
-    return () => clearTimeout(timer);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [copied]);
+  const [copied, copyToClipboard] = useCopyToClipboard(shortened);
 
   return (
     <div className={`w-full bg-white rounded-lg ${className}`}>
