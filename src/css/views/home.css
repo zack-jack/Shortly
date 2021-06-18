@@ -1,5 +1,5 @@
 .home {
-  @apply bg-gradient-to-b from-white to-gray-100;
+  background: linear-gradient(to top, theme('colors.gray.100') 75%, theme('colors.white'));
 }
 
 .home__illus-wrapper {
