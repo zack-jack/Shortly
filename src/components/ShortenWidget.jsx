@@ -6,12 +6,13 @@ import { ReactComponent as BackgroundSVG } from '../assets/images/_bg-shorten-mo
 import { linkValidator } from '../validation/link';
 import { post } from '../utils/http';
 import ShortenWidgetResult from './ShortenWidgetResult';
+import useLinkCards from '../hooks/useLinkCards';
 
 const ShortenWidget = () => {
   const {
     formState: { errors }, register, reset, handleSubmit,
   } = useForm();
-  const [links, setLinks] = useState([]);
+  const [linkCards, addLinkCard] = useLinkCards();
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState('');
 
@@ -41,10 +42,7 @@ const ShortenWidget = () => {
       return;
     }
 
-    setLinks([
-      { id, shortenedUrl, originalUrl },
-      ...links,
-    ]);
+    addLinkCard({ id, shortenedUrl, originalUrl });
 
     reset();
     setLoading(false);
@@ -100,8 +98,8 @@ const ShortenWidget = () => {
       </div>
       <TransitionGroup>
         {
-          links.length > 0
-          && links
+          linkCards.length > 0
+          && linkCards
             .filter(({ shortenedUrl }) => shortenedUrl)
             .map(({ id, originalUrl, shortenedUrl }) => (
               <CSSTransition
