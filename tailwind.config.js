@@ -22,8 +22,9 @@ module.exports = {
         sm: '14px',
         base: '16px',
         md: '18px',
-        lg: '28px',
-        xl: '36px',
+        lg: '22px',
+        xl: '28px',
+        '2xl': '36px',
       },
       colors: {
         transparent: 'transparent',
@@ -44,8 +45,9 @@ module.exports = {
         },
         gray: {
           ...colors.gray,
-          100: '#BFBFBF',
-          200: '#9E9AA7',
+          100: '#F0F1F6',
+          200: '#BFBFBF',
+          300: '#9E9AA7',
         },
         red: {
           ...colors.red,

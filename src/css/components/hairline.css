@@ -1,5 +1,5 @@
 .hairline-light {
-  @apply w-full block bg-gray-100 bg-opacity-20;
+  @apply w-full block bg-gray-200 bg-opacity-20;
   height: 1px;
 }
 

@@ -11,3 +11,9 @@
   @apply absolute top-0 bottom-0;
   right: -135px;
 }
+
+.home__vertical-line {
+  @apply bg-no-repeat bg-center;
+  background-image: linear-gradient(theme('colors.cyan.200'), theme('colors.cyan.200'));
+  background-size: 8px 100%;
+}

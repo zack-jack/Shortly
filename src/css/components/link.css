@@ -7,7 +7,7 @@
 }
 
 .link--gray {
-  @apply text-gray-200 font-normal tracking-normal;
+  @apply text-gray-300 font-normal tracking-normal;
 }
 
 .link--white:hover,

@@ -6,7 +6,7 @@ import { ReactComponent as InstagramSVG } from '../assets/images/_icon-instagram
 const AppFooter = () => (
   <footer className="flex flex-col items-center bg-indigo-200 p-10 text-center">
     <div>
-      <span className="text-lg font-bold text-white leading-none">Shortly</span>
+      <span className="text-xl font-bold text-white leading-none">Shortly</span>
     </div>
     <nav className="mt-10">
       <span

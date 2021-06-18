@@ -31,7 +31,7 @@
 .hamburger__inner,
 .hamburger__inner::before,
 .hamburger__inner::after {
-  @apply absolute block bg-gray-200 rounded;
+  @apply absolute block bg-gray-300 rounded;
   width: 30px;
   height: 4px;
 }

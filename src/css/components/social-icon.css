@@ -1,5 +1,5 @@
 .social-icon path {
-  @apply fill-current text-gray-200;
+  @apply fill-current text-gray-300;
 }
 
 .social-icon:hover path {
