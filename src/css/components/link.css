@@ -7,11 +7,11 @@
 }
 
 .link--gray {
-  @apply text-gray-300 font-normal tracking-normal;
+  @apply text-gray-400 font-normal tracking-normal;
 }
 
 .link--white:hover,
 .link--gray:hover {
-  @apply text-cyan-200 no-underline;
+  @apply text-cyan-100 no-underline;
   transition: all .2s ease;
 }

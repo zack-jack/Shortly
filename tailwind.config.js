@@ -31,8 +31,8 @@ module.exports = {
         black: '#000',
         white: '#fff',
         cyan: {
-          100: '#9BE3E2',
-          200: '#29C7C7',
+          100: '#29C7C7',
+          200: '#24B3B3',
         },
         purple: {
           ...colors.purple,
@@ -47,7 +47,8 @@ module.exports = {
           ...colors.gray,
           100: '#F0F1F6',
           200: '#BFBFBF',
-          300: '#9E9AA7',
+          300: '#6E6B74',
+          400: '#8B888F',
         },
         red: {
           ...colors.red,
