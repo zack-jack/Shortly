@@ -1,6 +1,6 @@
 import { PropTypes } from 'prop-types';
 
-const BoostCta = ({ headingText, buttonText }) => (
+const BoostCta = ({ headingText, buttonText, handleScroll }) => (
   <div className="boost-cta">
     <div
       aria-hidden
@@ -8,12 +8,13 @@ const BoostCta = ({ headingText, buttonText }) => (
     />
     <div className="boost-cta__content">
       <span className="boost-cta__heading">{headingText}</span>
-      <a
-        href="/"
+      <button
+        type="button"
         className="button mt-3"
+        onClick={handleScroll}
       >
         {buttonText}
-      </a>
+      </button>
     </div>
   </div>
 );
@@ -26,6 +27,7 @@ BoostCta.defaultProps = {
 BoostCta.propTypes = {
   headingText: PropTypes.string,
   buttonText: PropTypes.string,
+  handleScroll: PropTypes.func.isRequired,
 };
 
 export default BoostCta;

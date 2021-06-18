@@ -18,7 +18,10 @@ const ShortenWidget = () => {
   };
 
   return (
-    <div className="flex flex-col w-full">
+    <div
+      id="shorten-widget"
+      className="flex flex-col w-full"
+    >
       <div className="shorten-widget__form-wrapper">
         <BackgroundSVG
           aria-hidden
