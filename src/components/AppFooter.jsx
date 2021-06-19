@@ -18,7 +18,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Link Shortening
           </a>
@@ -26,7 +26,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Branded Links
           </a>
@@ -34,7 +34,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Analytics
           </a>
@@ -49,7 +49,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Blog
           </a>
@@ -57,7 +57,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Developers
           </a>
@@ -65,7 +65,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Support
           </a>
@@ -80,7 +80,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             About
           </a>
@@ -88,7 +88,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Our Team
           </a>
@@ -96,7 +96,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Careers
           </a>
@@ -104,7 +104,7 @@ const AppFooter = () => (
         <li className="mt-2">
           <a
             href="/"
-            className="link link--gray"
+            className="link link--lighter"
           >
             Contact
           </a>

@@ -21,6 +21,11 @@
   }
 }
 
+.btn--sm {
+  height: 38px;
+  min-width: 130px;
+}
+
 .btn--rect {
   @apply rounded-md;
 }

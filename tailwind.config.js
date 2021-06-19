@@ -58,6 +58,7 @@ module.exports = {
       },
       screens: {
         desktop: '1024px',
+        max: '1440px',
       },
     },
   },

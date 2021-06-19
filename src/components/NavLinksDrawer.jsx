@@ -1,4 +1,4 @@
-const NavLinks = () => (
+const NavLinksDrawer = () => (
   <nav
     data-testid="nav-links"
     className="flex flex-col items-center"
@@ -54,4 +54,4 @@ const NavLinks = () => (
   </nav>
 );
 
-export default NavLinks;
+export default NavLinksDrawer;

@@ -1,17 +1,26 @@
 .link {
-  @apply text-cyan-200 font-medium tracking-wide;
+  @apply text-gray-300 font-medium tracking-wide;
+}
+
+.link:hover {
+  @screen desktop {
+    @apply text-indigo-100;
+    transition: all .2s ease;
+  }
 }
 
 .link--white {
   @apply text-white;
 }
 
-.link--gray {
+.link--lighter {
   @apply text-gray-400 font-normal tracking-normal;
 }
 
 .link--white:hover,
-.link--gray:hover {
-  @apply text-cyan-100 no-underline;
-  transition: all .2s ease;
+.link--lighter:hover {
+  @screen desktop {
+    @apply text-cyan-100 no-underline;
+    transition: all .2s ease;
+  }
 }

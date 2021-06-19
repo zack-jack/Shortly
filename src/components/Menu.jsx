@@ -1,6 +1,6 @@
 import { CSSTransition } from 'react-transition-group';
 import { PropTypes } from 'prop-types';
-import NavLinks from './NavLinks';
+import NavLinksDrawer from './NavLinksDrawer';
 
 const Menu = ({ isOpen, handleClick }) => (
   <div>
@@ -32,7 +32,7 @@ const Menu = ({ isOpen, handleClick }) => (
           onClick={handleClick}
         />
         <div className="menu__content">
-          <NavLinks />
+          <NavLinksDrawer />
         </div>
       </div>
     </CSSTransition>

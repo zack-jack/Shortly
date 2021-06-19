@@ -1,6 +1,17 @@
-const useDeviceType = () => {
-  const mobileMediaQuery = matchMedia('screen and (min-width: 0px) and (max-width: 1023px)');
-  const deviceType = mobileMediaQuery.matches ? 'mobile' : 'desktop';
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useEffect, useState } from 'react';
+
+const useDeviceType = (breakpoint = 1023) => {
+  const [deviceType, setDeviceType] = useState('');
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setDeviceType(window.innerWidth > breakpoint ? 'desktop' : 'mobile');
+    };
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => window.removeEventListener('resize', handleWindowResize);
+  }, []);
 
   return {
     deviceType,
