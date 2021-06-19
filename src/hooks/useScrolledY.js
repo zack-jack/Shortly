@@ -5,7 +5,7 @@ const useScrolledY = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolledY(window.scrollY > 0);
+      setIsScrolledY(window.scrollY > 10);
     };
     window.addEventListener('scroll', handleScroll);
 

@@ -25,6 +25,7 @@ module.exports = {
         lg: '22px',
         xl: '28px',
         '2xl': '36px',
+        '3xl': '44px',
       },
       colors: {
         transparent: 'transparent',
@@ -57,6 +58,7 @@ module.exports = {
         },
       },
       screens: {
+        tablet: '768px',
         desktop: '1024px',
         max: '1440px',
       },

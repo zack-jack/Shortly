@@ -11,7 +11,7 @@ const AppHeader = () => {
   return isDesktop
     ? (
       <header
-        className={`fixed top-0 right-0 left-0 bg-white py-6 px-10 z-10 ${isScrolledY ? 'shadow-md' : ''}`}
+        className={`app-header app-header--desktop ${isScrolledY ? 'shadow-md' : ''}`}
       >
         <nav className="flex items-center justify-between">
           <ul className="flex items-center">
@@ -71,7 +71,7 @@ const AppHeader = () => {
     )
     : (
       <header
-        className={`fixed top-0 right-0 left-0 flex items-center justify-between bg-white py-6 px-4 z-10 ${isScrolledY ? 'shadow-md' : ''}`}
+        className={`app-header app-header--mobile ${isScrolledY ? 'shadow-md' : ''}`}
       >
         <a
           href="/"

@@ -1,4 +1,5 @@
 .u-container {
+  @apply w-full;
   padding-top: 81px;
 
   @screen desktop {
@@ -6,7 +7,6 @@
   }
 
   @screen max {
-    @apply mx-auto;
     max-width: 1440px;
   }
 }

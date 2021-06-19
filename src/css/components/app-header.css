@@ -1,0 +1,12 @@
+.app-header {
+  @apply fixed top-0 w-full py-6 bg-white z-10;
+}
+
+.app-header--desktop {
+  @apply right-auto left-auto px-10;
+  max-width: 1440px;
+}
+
+.app-header--mobile {
+  @apply flex items-center justify-between px-4 md:px-8;
+}

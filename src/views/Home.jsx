@@ -7,6 +7,7 @@ import { ReactComponent as FullyCustomizableSVG } from '../assets/images/_icon-f
 import ShortenWidget from '../components/ShortenWidget';
 import ValuePropCard from '../components/ValuePropCard';
 import BoostCta from '../components/BoostCta';
+import useDeviceType from '../hooks/useDeviceType';
 
 const valueProps = [
   {
@@ -27,6 +28,7 @@ const valueProps = [
 ];
 
 const Home = () => {
+  const { isDesktop, isTablet } = useDeviceType();
   const widget = createRef();
 
   const scrollToWidget = () => {
@@ -36,30 +38,36 @@ const Home = () => {
     window.scrollTo({ top: y, behavior: 'smooth' });
   };
 
+  const getIllustrationHeight = () => {
+    if (isDesktop) return 450;
+    if (isTablet) return 350;
+    return 280;
+  };
+
   return (
     <div className="home">
-      <section className="text-center px-4">
-        <div
-          className="home__illus-wrapper"
-        >
+      <section className="px-4 sm:flex sm:items-center sm:pr-0 md:pr-0 md:pl-8 md:pt-4 lg:pl-10 lg:pt-0">
+        <div className="home__illus-wrapper">
           <IllustrationSVG
-            height={300}
+            height={getIllustrationHeight()}
             className="home__illus"
           />
         </div>
-        <h1 className="text-2xl font-bold text-indigo-100 leading-tight mt-8">
-          More than just shorter links
-        </h1>
-        <p className="text-gray-300 mt-3">
-          Build your brand&apos;s recognition and get detailed insights on how your links are performing.
-        </p>
-        <button
-          type="button"
-          className="btn mt-5"
-          onClick={scrollToWidget}
-        >
-          Get Started
-        </button>
+        <div className="text-center sm:text-left sm:w-6/12 md:w-5/12">
+          <h1 className="text-2xl lg:text-3xl font-bold text-indigo-100 leading-tight mt-8 sm:mt-0">
+            More than just shorter links
+          </h1>
+          <p className="text-gray-300 lg:text-md mt-3">
+            Build your brand&apos;s recognition and get detailed insights on how your links are performing.
+          </p>
+          <button
+            type="button"
+            className="btn mt-5"
+            onClick={scrollToWidget}
+          >
+            Get Started
+          </button>
+        </div>
       </section>
       <section
         ref={widget}
