@@ -1,18 +1,31 @@
 .shorten-widget__form-wrapper {
   @apply relative w-full bg-purple-100 rounded-lg overflow-hidden;
+  height: 200px;
+
+  @screen desktop {
+    height: 168px;
+  }
 }
 
 .shorten-widget__form-bg-img {
-  @apply absolute right-0;
-  top: -30px;
+  @apply w-full h-full;
+  background: url('../../assets/images/_bg-shorten-mobile.svg');
+  background-repeat: no-repeat;
+  background-position: bottom 40px right;
+  background-size: contain;
 
   @screen desktop {
-    @apply top-0 left-0 w-full h-full;
+    background: url('../../assets/images/_bg-shorten-desktop.svg');
+    background-position: center;
+    background-size: cover;
   }
 }
 
 .shorten-widget__form {
-  @apply relative flex flex-col w-full px-6 py-8;
+  @apply absolute flex flex-col w-full px-6 py-8;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
   @screen desktop {
     @apply flex-row items-center flex-wrap;

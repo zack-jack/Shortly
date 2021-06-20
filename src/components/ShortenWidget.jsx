@@ -2,19 +2,15 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { ReactComponent as MobileBackgroundSVG } from '../assets/images/_bg-shorten-mobile.svg';
-import { ReactComponent as DesktopBackgroundSVG } from '../assets/images/_bg-shorten-desktop.svg';
 import { linkValidator } from '../validation/link';
 import { post } from '../utils/http';
 import ShortenWidgetResult from './ShortenWidgetResult';
-import useDeviceType from '../hooks/useDeviceType';
 import useLinkCards from '../hooks/useLinkCards';
 
 const ShortenWidget = () => {
   const {
     formState: { errors }, register, reset, handleSubmit,
   } = useForm();
-  const { isDesktop } = useDeviceType();
   const [linkCards, addLinkCard] = useLinkCards();
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState('');
@@ -54,19 +50,10 @@ const ShortenWidget = () => {
   return (
     <div className="flex flex-col w-full">
       <div className="shorten-widget__form-wrapper">
-        {
-          isDesktop ? (
-            <DesktopBackgroundSVG
-              aria-hidden
-              className="shorten-widget__form-bg-img"
-            />
-          ) : (
-            <MobileBackgroundSVG
-              aria-hidden
-              className="shorten-widget__form-bg-img"
-            />
-          )
-        }
+        <div
+          aria-hidden
+          className="shorten-widget__form-bg-img"
+        />
         <form
           className="shorten-widget__form"
           onSubmit={handleSubmit((data) => submit(data))}
