@@ -1,9 +1,9 @@
 /*
   global
   afterEach,
+  jest,
   test,
   expect,
-  jest,
 */
 import {
   fireEvent, render, screen, waitFor,
