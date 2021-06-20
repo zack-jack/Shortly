@@ -2,7 +2,7 @@
   background: linear-gradient(to top, theme('colors.gray.100') 60%, theme('colors.white'));
 
   @screen desktop {
-    background: linear-gradient(to top, theme('colors.gray.100'), theme('colors.white'));
+    background: linear-gradient(to top, theme('colors.gray.100') 35%, theme('colors.white'));
   }
 }
 

@@ -71,7 +71,7 @@ const Home = () => {
       </section>
       <section
         ref={widget}
-        className="flex justify-center mt-xl px-4"
+        className="flex justify-center mt-xl px-4 md:px-8 lg:px-10"
       >
         <ShortenWidget />
       </section>

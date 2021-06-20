@@ -1,0 +1,12 @@
+.shorten-widget-result {
+  @apply w-full bg-white rounded-lg;
+
+  @screen desktop {
+    @apply flex items-center justify-between;
+    padding: 20px 120px;
+  }
+
+  @screen max {
+    padding: 20px 180px;
+  }
+}

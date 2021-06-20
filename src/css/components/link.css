@@ -9,6 +9,17 @@
   }
 }
 
+.link--cyan {
+  @apply text-cyan-200;
+}
+
+.link--cyan:hover {
+  @screen desktop {
+    @apply text-cyan-300 no-underline;
+    transition: all .2s ease;
+  }
+}
+
 .link--white {
   @apply text-white;
 }

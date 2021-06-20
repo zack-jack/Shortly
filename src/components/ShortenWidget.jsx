@@ -2,16 +2,19 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import { ReactComponent as BackgroundSVG } from '../assets/images/_bg-shorten-mobile.svg';
+import { ReactComponent as MobileBackgroundSVG } from '../assets/images/_bg-shorten-mobile.svg';
+import { ReactComponent as DesktopBackgroundSVG } from '../assets/images/_bg-shorten-desktop.svg';
 import { linkValidator } from '../validation/link';
 import { post } from '../utils/http';
 import ShortenWidgetResult from './ShortenWidgetResult';
+import useDeviceType from '../hooks/useDeviceType';
 import useLinkCards from '../hooks/useLinkCards';
 
 const ShortenWidget = () => {
   const {
     formState: { errors }, register, reset, handleSubmit,
   } = useForm();
+  const { isDesktop } = useDeviceType();
   const [linkCards, addLinkCard] = useLinkCards();
   const [loading, setLoading] = useState(false);
   const [apiError, setApiError] = useState('');
@@ -51,17 +54,26 @@ const ShortenWidget = () => {
   return (
     <div className="flex flex-col w-full">
       <div className="shorten-widget__form-wrapper">
-        <BackgroundSVG
-          aria-hidden
-          className="shorten-widget__form-bg-img"
-        />
+        {
+          isDesktop ? (
+            <DesktopBackgroundSVG
+              aria-hidden
+              className="shorten-widget__form-bg-img"
+            />
+          ) : (
+            <MobileBackgroundSVG
+              aria-hidden
+              className="shorten-widget__form-bg-img"
+            />
+          )
+        }
         <form
           className="shorten-widget__form"
           onSubmit={handleSubmit((data) => submit(data))}
         >
           <label
             htmlFor="link"
-            className="w-full"
+            className="w-full lg:flex-grow lg:w-auto"
           >
             <input
               id="link"
@@ -72,7 +84,7 @@ const ShortenWidget = () => {
               className={(errors.link || apiError) ? 'input-field errors' : 'input-field'}
             />
           </label>
-          <div className="input-field__error-msg">
+          <div className="input-field__error-msg lg:w-full lg:mb-0 lg:order-last">
             { errors?.link?.message || apiError }
           </div>
           {
@@ -81,14 +93,14 @@ const ShortenWidget = () => {
                 aria-disabled
                 type="submit"
                 disabled
-                className="btn btn--rect btn--disabled w-full"
+                className="btn btn--rect btn--disabled w-full lg:w-auto lg:ml-6"
               >
                 Shortening...
               </button>
             ) : (
               <button
                 type="submit"
-                className="btn btn--rect w-full"
+                className="btn btn--rect w-full lg:w-auto lg:ml-6"
               >
                 Shorten It!
               </button>
