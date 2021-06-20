@@ -93,14 +93,14 @@ const ShortenWidget = () => {
                 aria-disabled
                 type="submit"
                 disabled
-                className="btn btn--rect btn--disabled w-full lg:w-auto lg:ml-6"
+                className="btn btn--rect btn--disabled w-full lg:w-auto lg:ml-10"
               >
                 Shortening...
               </button>
             ) : (
               <button
                 type="submit"
-                className="btn btn--rect w-full lg:w-auto lg:ml-6"
+                className="btn btn--rect w-full lg:w-auto lg:ml-10"
               >
                 Shorten It!
               </button>

@@ -46,7 +46,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <section className="px-4 sm:flex sm:items-center sm:pr-0 md:pr-0 md:pl-8 md:pt-4 lg:pl-10 lg:pt-0">
+      <section className="px-4 sm:flex sm:items-center sm:pr-0 md:pr-0 md:pl-8 md:pt-4 lg:pl-10 lg:pt-0 max:pl-xl">
         <div className="home__illus-wrapper">
           <IllustrationSVG
             height={getIllustrationHeight()}
@@ -71,11 +71,11 @@ const Home = () => {
       </section>
       <section
         ref={widget}
-        className="flex justify-center mt-xl px-4 md:px-8 lg:px-10"
+        className="flex justify-center mt-xl px-4 md:px-8 lg:px-10 max:px-xl"
       >
         <ShortenWidget />
       </section>
-      <section className="mt-xl px-4 text-center lg:px-10">
+      <section className="mt-xl px-4 text-center lg:px-10 max:px-xl">
         <div className="flex flex-col items-center px-2">
           <h2 className="text-xl font-bold text-indigo-100">Advanced Statistics</h2>
           <p className="text-gray-300 lg:w-4/12 lg:text-md mt-3">Track how your links are performing across the web with our advanced statistics dashboard.</p>
@@ -87,7 +87,7 @@ const Home = () => {
                 key={title}
                 title={title}
                 blurb={blurb}
-                className={i > 0 ? 'mt-xl lg:ml-8' : ''}
+                className={i > 0 ? 'mt-xl lg:ml-8 max:ml-10' : ''}
               >
                 { icon }
               </ValuePropCard>

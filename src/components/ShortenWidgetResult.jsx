@@ -19,7 +19,7 @@ const ShortenWidgetResult = ({ className, original, shortened }) => {
         </a>
         <button
           type="button"
-          className={`btn btn--rect w-full mt-3 lg:mt-0 lg:ml-6 ${copied ? 'btn--secondary' : ''}`}
+          className={`btn btn--rect w-full mt-3 lg:mt-0 lg:ml-10 ${copied ? 'btn--secondary' : ''}`}
           onClick={copyToClipboard}
         >
           { copied ? 'Copied!' : 'Copy' }

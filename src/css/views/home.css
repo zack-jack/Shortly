@@ -32,6 +32,10 @@
   @screen desktop {
     right: -190px;
   }
+
+  @screen max {
+    right: -90px;
+  }
 }
 
 .home__bg-line {
