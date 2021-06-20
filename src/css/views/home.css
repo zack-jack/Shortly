@@ -34,8 +34,30 @@
   }
 }
 
-.home__vertical-line {
+.home__bg-line {
   @apply bg-no-repeat bg-center;
   background-image: linear-gradient(theme('colors.cyan.200'), theme('colors.cyan.200'));
   background-size: 8px 100%;
+
+  @screen desktop {
+    background-size: 100% 8px;
+  }
+}
+
+.home .value-prop-card {
+  @screen desktop {
+    @apply mt-0;
+  }
+}
+
+.home .value-prop-card:first-of-type {
+  @screen desktop {
+    margin-bottom: 80px;
+  }
+}
+
+.home .value-prop-card:last-of-type {
+  @screen desktop {
+    margin-top: 80px;
+  }
 }

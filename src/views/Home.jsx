@@ -75,19 +75,19 @@ const Home = () => {
       >
         <ShortenWidget />
       </section>
-      <section className="mt-xl px-4 text-center">
-        <div className="px-2">
+      <section className="mt-xl px-4 text-center lg:px-10">
+        <div className="flex flex-col items-center px-2">
           <h2 className="text-xl font-bold text-indigo-100">Advanced Statistics</h2>
-          <p className="text-gray-300 mt-3">Track how your links are performing across the web with our advanced statistics dashboard.</p>
+          <p className="text-gray-300 lg:w-4/12 lg:text-md mt-3">Track how your links are performing across the web with our advanced statistics dashboard.</p>
         </div>
-        <div className="home__vertical-line mt-xl">
+        <div className="home__bg-line mt-xl lg:flex lg:items-center">
           {
             valueProps.map(({ title, blurb, icon }, i) => (
               <ValuePropCard
                 key={title}
                 title={title}
                 blurb={blurb}
-                className={i > 0 ? 'mt-xl' : ''}
+                className={i > 0 ? 'mt-xl lg:ml-8' : ''}
               >
                 { icon }
               </ValuePropCard>

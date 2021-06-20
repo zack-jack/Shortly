@@ -4,7 +4,7 @@ import { ReactComponent as PinterestSVG } from '../assets/images/_icon-pinterest
 import { ReactComponent as InstagramSVG } from '../assets/images/_icon-instagram.svg';
 
 const AppFooter = () => (
-  <footer className="flex flex-col items-center w-full bg-indigo-200 p-10 text-center">
+  <footer className="flex flex-col items-center bg-indigo-200 p-10 text-center u-container-x">
     <div>
       <span className="text-xl font-bold text-white leading-none">Shortly</span>
     </div>

@@ -3,10 +3,6 @@
 
   @screen desktop {
     @apply flex items-center justify-between;
-    padding: 20px 120px;
-  }
-
-  @screen max {
-    padding: 20px 180px;
+    padding: 20px 40px;
   }
 }
