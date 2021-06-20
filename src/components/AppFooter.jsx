@@ -4,114 +4,120 @@ import { ReactComponent as PinterestSVG } from '../assets/images/_icon-pinterest
 import { ReactComponent as InstagramSVG } from '../assets/images/_icon-instagram.svg';
 
 const AppFooter = () => (
-  <footer className="flex flex-col items-center bg-indigo-200 p-10 text-center u-container-x">
+  <footer className="app-footer">
     <div>
       <span className="text-xl font-bold text-white leading-none">Shortly</span>
     </div>
-    <nav className="mt-10">
-      <span
-        className="block font-medium text-white"
-      >
-        Features
-      </span>
-      <ul className="mt-4">
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Link Shortening
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Branded Links
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Analytics
-          </a>
-        </li>
-      </ul>
-      <span
-        className="block font-medium text-white mt-8"
-      >
-        Resources
-      </span>
-      <ul className="mt-4">
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Blog
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Developers
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Support
-          </a>
-        </li>
-      </ul>
-      <span
-        className="block font-medium text-white mt-8"
-      >
-        Company
-      </span>
-      <ul className="mt-4">
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            About
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Our Team
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Careers
-          </a>
-        </li>
-        <li className="mt-2">
-          <a
-            href="/"
-            className="link link--lighter"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+    <nav className="app-footer__nav">
+      <div className="app-footer__list-wrapper">
+        <span
+          className="block font-medium text-white"
+        >
+          Features
+        </span>
+        <ul className="mt-4">
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Link Shortening
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Branded Links
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Analytics
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="app-footer__list-wrapper">
+        <span
+          className="block font-medium text-white"
+        >
+          Resources
+        </span>
+        <ul className="mt-4">
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Blog
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Developers
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Support
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div className="app-footer__list-wrapper">
+        <span
+          className="block font-medium text-white"
+        >
+          Company
+        </span>
+        <ul className="mt-4">
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              About
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Our Team
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Careers
+            </a>
+          </li>
+          <li className="mt-2">
+            <a
+              href="/"
+              className="link link--lighter"
+            >
+              Contact
+            </a>
+          </li>
+        </ul>
+      </div>
     </nav>
-    <div className="flex items-center mt-10">
+    <div className="app-footer__social">
       <a href="/">
         <span className="sr-only">Facebook</span>
         <FacebookSVG
